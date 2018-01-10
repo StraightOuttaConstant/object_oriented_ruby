@@ -51,9 +51,22 @@ p employee_1.active
 employee_1.active = false
 p employee_1.active
 
+class Manager < Employee
+  def send_report
+    puts "Sending Email..."
+    #code that sends email
+    puts "Email sent."
+  end
+end
 
-
-
+manager = Manager.new(
+                      first_name: "Clark",
+                      last_name: "Kent",
+                      salary: 100000,
+                      active: true
+                      )
+manager.print_info
+manager.send_report
 
 
 
